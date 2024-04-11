@@ -1,5 +1,14 @@
 <template>
-    <v-container>
+    <v-container class="mt-n6">
+        <v-row>
+          <v-col cols="12" class="text-center">
+            <h1 class="dm-serif-title">
+              DESCUBRE TU CARRERA, HAZ CLIC PARA VER MÁS...
+            </h1>
+            <v-icon size="100" class="arrow-icon mt-5" v-show="showArrow" color="#f70004">mdi-arrow-down
+            </v-icon>
+          </v-col>
+        </v-row>
         <v-row justify="center">
             <v-col cols="12" md="6" v-for="(item, index) in items"
                 :key="index">
@@ -11,14 +20,14 @@
                         v-bind="props" 
                         @click="showDialog(index)">
                         <v-row align="center">
-                            <v-col cols="6">
+                            <v-col cols="7">
                                 <v-card-item class="text-white">
                                     <p class="dm-serif-items">{{ item.description }}</p>
                                 </v-card-item>
                                 <v-card-action >
                                     <v-btn 
                                         v-if="isHovering"
-                                        class="mt-2 transition-fast-in-fast-out"
+                                        class="mt-2"
                                         variant="tonal" 
                                         color="white"
                                         @click.stop="showDialog(index)">
@@ -26,7 +35,9 @@
                                     </v-btn>
                                 </v-card-action>
                             </v-col>
-                            <v-col cols="6">
+                            <v-col cols="1">
+                            </v-col>
+                            <v-col cols="4">
                                 <v-img
                                 :src="item.image"
                                 width="50%"
@@ -54,7 +65,14 @@
 
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted  } from 'vue';
+
+const showArrow = ref(false);
+
+// Mostrar el ícono de flecha después de que la página se ha cargado completamente
+onMounted(() => {
+  showArrow.value = true;
+});
 
 const items = ref([
   {
@@ -108,14 +126,36 @@ function showDialog(index) {
   font-size: large;
 }
 
+.dm-serif-title {
+  font-family: "DM Serif Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+}
+
 .imagen-logo{
   max-height: 90px;
 }
 
 @media (max-width: 600px){
+
   .imagen-logo{
-  height: 50px;
-}
+    height: 50px;
+  }
+
+  .dm-serif-items {
+    font-family: "DM Serif Display", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: small;
+  }
+
+  .dm-serif-title {
+    font-family: "DM Serif Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: small;
+  }
 }
 
 
@@ -133,14 +173,28 @@ function showDialog(index) {
   transform: translateY(2px);
 }
 
-.transition-fast-in-fast-out {
-  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1); 
-}
-
 
 .v-card:hover {
   cursor: pointer;
-  transform: translateY(-7px);
-  transition: transform 0.3s ease;
+  transform: scale(1.03);
+  transition: all 0.6s ease-out;
+}
+
+.arrow-icon {
+  animation: bounceDown 1s ease-in-out infinite;
+  opacity: 0; /* Inicialmente ocultar el ícono */
+}
+
+@keyframes bounceDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 </style>
