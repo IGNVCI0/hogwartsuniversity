@@ -145,9 +145,9 @@ const drawer = ref(false);
 
 const menuItems = ref([
   { text: 'Inicio', icon: 'mdi-home' , to:'/'},
-  { text: 'Biblioteca', icon: 'mdi-book-open-variant-outline' , to:'/'},
-  { text: 'Carreras', icon: 'mdi-school-outline' , to:'/'},
-  { text: 'Academicos', icon: 'mdi-human-male-board' , to:'/'},
+  { text: 'Biblioteca', icon: 'mdi-book-open-variant-outline' , to:'biblioteca'},
+  { text: 'Carreras', icon: 'mdi-school-outline' , to:'carreras'},
+  { text: 'Academicos', icon: 'mdi-human-male-board' , to:'academicos'},
 ]);
 
 </script>

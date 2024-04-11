@@ -11,9 +11,9 @@ const routes = [
         component: HomeLayout,
         children: [
             { path: '', component: ViewHome },
-            { path: 'biblioteca', component: ViewAcademico },
-            { path: 'carreras', component: ViewBiblioteca },
-            { path: 'academicos', component: ViewCarreras },
+            { path: 'biblioteca', component: ViewBiblioteca  },
+            { path: 'carreras', component: ViewCarreras},
+            { path: 'academicos', component: ViewAcademico },
 
         ]
     }

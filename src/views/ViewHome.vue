@@ -19,6 +19,7 @@
                 </v-carousel>
             </v-col>
         </v-row>
+      <div>
         <v-row justify="center" class="mt-5">
             <v-col class="text-center" cols="auto">
                     <h1 class="dm-serif-title">
@@ -49,6 +50,7 @@
               </div>
             </v-col>
         </v-row>
+      </div>
     </v-container>
 </template>
 
@@ -69,7 +71,7 @@ const items = ref([
     image: 'Carreras-05.png'
   },
   {
-    description: 'DEFENSA CONTRA LAS ARTES OSCURAS',
+    description: 'ADMINISTRACION Y GESTION DE RECURSOS MAGICOS',
     image: 'Carreras-06.png'
   },
   {
