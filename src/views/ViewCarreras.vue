@@ -39,14 +39,12 @@
             </v-col>
         </v-row>
         <!-- Diálogo para mostrar la información detallada -->
-        <v-dialog v-model="dialog" max-width="600">
-        <v-card>
-            <v-card-title>{{ items[selectedItem].description }}</v-card-title>
-            <v-card-text>
-            <v-img :src="items[selectedItem].image" width="100%"></v-img>
-            </v-card-text>
+        <v-dialog v-model="dialog" max-width="90%">
+        <v-card class="pa-10">
+              <v-card-title>{{ items[selectedItem].description }}</v-card-title>
+              <v-card-text>{{ items[selectedItem].text }}</v-card-text>
             <v-card-actions>
-            <v-btn color="primary" @click="dialog = false">Cerrar</v-btn>
+              <v-btn color="#f70004" @click="dialog = false" block variant="tonal">Cerrar</v-btn>
             </v-card-actions>
         </v-card>
         </v-dialog>
@@ -62,26 +60,31 @@ const items = ref([
   {
     description: 'ENCANTAMIENTOS Y DISEÑOS DE ARTEFACTOS MAGICOS',
     image: 'Carreraswhite-11.png',
+    text: '',
     color:'#bd1622',
   },
   {
     description: 'MAGIZOOLOGÍA Y CUIDADO DE CRIATURAS MÁGICAS',
     image: 'Carreraswhite-10.png',
+    text: '',
     color:'#006633',
   },
   {
     description: 'DEFENSA CONTRA LAS ARTES OSCURAS',
     image: 'Carreraswhite-09.png',
+    text: '',
     color:'#050505',
   },
   {
     description: 'ADMINISTRACION Y GESTION DE RECURSOS MAGICOS',
     image: 'Carreraswhite-08.png',
+    text: '',
     color:'#eecd00',
   },
   {
     description: 'DERECHO, JUSTICIA Y LEYES MAGICAS',
     image: 'Carreraswhite-07.png',
+    text: '',
     color:'#00549a',
   },
 ]);
