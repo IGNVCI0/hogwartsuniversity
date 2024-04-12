@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import ViewHome from '../views/ViewHome.vue';
 import HomeLayout from '../layouts/HomeLayout.vue'
-import ViewAcademico from '../views/ViewAcademico.vue';
+import ViewNoticias from '../views/ViewNoticias.vue';
 import ViewBiblioteca from '../views/ViewBiblioteca.vue';
 import ViewCarreras from '../views/ViewCarreras.vue';
 
@@ -13,7 +13,7 @@ const routes = [
             { path: '', component: ViewHome },
             { path: 'biblioteca', component: ViewBiblioteca  },
             { path: 'carreras', component: ViewCarreras},
-            { path: 'academicos', component: ViewAcademico },
+            { path: 'noticias', component: ViewNoticias },
 
         ]
     }
