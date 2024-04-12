@@ -62,7 +62,13 @@
     synopsis: 'Una historia completa sobre el deporte de Quidditch, desde sus orígenes hasta las reglas modernas.',
     image: 'Z.png'
   },
-
+  {
+    title: 'Adivinación Avanzada: Más Allá de las Bolas de Cristal',
+    author: 'Cassandra Vablatsky',
+    creationDate: '1805',
+    synopsis: 'Exploración de métodos avanzados de adivinación y predicción en el mundo mágico.',
+    image: 'aaa.webp'
+  },
   {
     title: 'Plantas Mágicas y Sus Usos',
     author: 'Phyllida Spore',
