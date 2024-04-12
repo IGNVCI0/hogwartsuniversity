@@ -75,9 +75,9 @@
             </v-col>
         </v-row>
         <v-row justify="center">
-          <v-col cols="8" md="2"  class="text-center">
+          <v-col cols="8" md="3"  class="text-center">
             <v-btn class="text-center raleway-text" variant="tonal" size="x-large" append-icon="mdi-eye" block to="carreras">
-              Ver Más
+              Ver Más Carreras
             </v-btn>
           </v-col>
         </v-row>
